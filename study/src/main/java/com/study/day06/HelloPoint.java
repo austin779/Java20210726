@@ -6,13 +6,19 @@ public class HelloPoint {
 		System.out.println(Math.sqrt(9));
 		//指數次方
 		System.out.println(Math.pow(3, 2));
-		//假設A點(10,20)B點(-15,50)
-		//求線段距離
+		//1.假設A點(10,20)B點(-15,50)
+		//2.求線段距離
 		//題示:建立POINTDISTANCE.JAVA +組合
-		Point a = new Point(10,20);
-		Point b = new Point(-15,50);
-		PointDistance d_ab = new PointDistance(a,b);
-		System.out.println(d_ab.getDistance());
+		//我的思維 ->1.點class+2.算值class
+		
+		Point A = new Point(10, 20);
+		Point B = new Point(-15, 50);
+		PointDistance pointDistance = new PointDistance(A, B);
+		double distance = pointDistance.getDistance();
+		System.out.println(distance);
+		System.out.println(pointDistance);
+		
+
 		
 	}
 }

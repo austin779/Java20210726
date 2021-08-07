@@ -2,26 +2,33 @@ package com.study.day06;
 
 public class PointDistance 
 {
-	private Point p1;
-	private Point p2;
-	private double distance;
+	private Point point1;
+	private Point point2;
+	double distance;
 	
-	//建構式
-	public PointDistance(Point p1,Point p2)
-	{
-		this.p1 = p1;
-		this.p2 = p2;
-		this.distance = calDistance();
+	public PointDistance(Point point1, Point point2) {
+		this.point1 = point1;
+		this.point2 = point2;
+		calcDistance();
 	}
-	//計算距離的方法
-	private double calDistance() 
+	public void  calcDistance()
 	{
-		double d = Math.sqrt(Math.pow(p1.getX() - p2.getX(),2) + Math.pow(p1.getY() - p2.getY(),2));
-		return d;
+		int dx = point1.getX() - point2.getX();
+		int dy = point1.getY() - point2.getY();
+		double  d2 = Math.pow(dx, 2) + Math.pow(dy, 2);
+		double dxy = Math.sqrt(d2) ;
+		distance = dxy;
 	}
-	//取得距離的方法
-
-	public double getDistance() {
+	public Double getDistance()
+	{
 		return distance;
 	}
+	@Override
+	public String toString() {
+		return "PointDistance [point1=" + point1 + ", point2=" + point2 + ", distance=" + distance + "]";
+	}
+	
+	
+	
+	
 }
