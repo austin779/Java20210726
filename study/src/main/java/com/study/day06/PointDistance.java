@@ -1,4 +1,4 @@
-package com.study.day01;
+package com.study.day06;
 
 public class PointDistance 
 {
